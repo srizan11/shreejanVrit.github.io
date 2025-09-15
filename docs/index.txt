@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Validator Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #007acc;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    a.button:hover {
+      background: #005f99;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Email Validator Project</h1>
+    <p>Django + Celery + RabbitMQ + Redis + Postgres, running on Docker</p>
+  </header>
+
+  <main>
+    <h2>About</h2>
+    <p>
+      This project is a backend system built with Django and Django REST Framework.
+      It validates emails asynchronously using Celery workers, RabbitMQ for messaging,
+      and Redis as a broker and cache. The database is managed with PostgreSQL.
+    </p>
+
+    <h2>Running Locally</h2>
+    <ol>
+      <li>Clone the repository</li>
+      <li>Install Docker & Docker Compose</li>
+      <li>Run <code>docker compose up --build</code></li>
+      <li>Open <a href="http://localhost:8000" target="_blank">http://localhost:8000</a></li>
+    </ol>
+
+    <h2>API Usage</h2>
+    <p>
+      Example request with Postman:
+      <pre>
+POST http://localhost:8000/api/validate-emails/
+{
+  "emails": ["demo1@example.com", "demo2@gmail.com"]
+}
+      </pre>
+    </p>
+
+    <a class="button" href="https://github.com/YourGitHubUsername/YourRepoName" target="_blank">
+      View Source Code
+    </a>
+  </main>
+
+  <footer>
+    <p>Vrit Task by Shreejan Pokharel</p>
+  </footer>
+</body>
+</html>
